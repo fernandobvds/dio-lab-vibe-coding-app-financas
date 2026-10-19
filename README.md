@@ -658,7 +658,7 @@ Explicar os números com um agente de IA educativo, sem julgamentos ou promessas
 Simular possíveis economias sem alterar os registros.
 
 
-Site:
+Site:  https://organizachat.lovable.app
 
 <img width="333" height="405" alt="{EDFEC6BF-6060-4ABC-8EDF-D48C730FD751}" src="https://github.com/user-attachments/assets/d51c6175-9149-43f4-9df3-b0c7e41edf0c" />
 

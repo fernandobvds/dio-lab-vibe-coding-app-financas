@@ -638,3 +638,14 @@ Requisitos:
 Testes automatizados ou inspeção de atributos não substituem
 avaliação manual com tecnologias assistivas.
 ```
+
+Site:
+
+<img width="333" height="405" alt="{EDFEC6BF-6060-4ABC-8EDF-D48C730FD751}" src="https://github.com/user-attachments/assets/d51c6175-9149-43f4-9df3-b0c7e41edf0c" />
+
+<img width="675" height="804" alt="image" src="https://github.com/user-attachments/assets/986e5ab0-6936-4a0e-9949-09cd4628924f" />
+
+<img width="383" height="417" alt="{16B25540-16D9-4713-B1CB-68CC1087ED11}" src="https://github.com/user-attachments/assets/6085055f-5439-4a0e-a34c-6d3ddd103ec8" />
+
+<img width="379" height="404" alt="{B9967CFC-7BE7-4806-9BAA-4C6462736FD4}" src="https://github.com/user-attachments/assets/871b10d8-8530-4f58-9e3b-8d7a5f3151fe" />
+

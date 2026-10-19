@@ -639,6 +639,25 @@ Testes automatizados ou inspeção de atributos não substituem
 avaliação manual com tecnologias assistivas.
 ```
 
+O Organiza é um aplicativo de organização financeira pessoal que facilita o controle de receitas, despesas e metas.
+
+Suas principais funções são:
+
+Registrar receitas e despesas por conversa, com revisão e confirmação antes de salvar.
+
+Oferecer um formulário guiado como alternativa ao chat.
+
+Sugerir categorias e permitir consultar, editar e excluir lançamentos.
+
+Mostrar resumos por período, com receitas, despesas, resultado e gastos por categoria.
+
+Acompanhar metas, incluindo valor-alvo, valor informado como reservado, progresso e prazo.
+
+Explicar os números com um agente de IA educativo, sem julgamentos ou promessas de resultado.
+
+Simular possíveis economias sem alterar os registros.
+
+
 Site:
 
 <img width="333" height="405" alt="{EDFEC6BF-6060-4ABC-8EDF-D48C730FD751}" src="https://github.com/user-attachments/assets/d51c6175-9149-43f4-9df3-b0c7e41edf0c" />

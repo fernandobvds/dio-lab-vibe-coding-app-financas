@@ -1,5 +1,37 @@
 # 💸 App de Organização de Finanças Pessoais com Vibe Coding - Feranando Batista
 
+# Organiza — Finanças pessoais por conversa
+
+Organize receitas, despesas e metas com uma experiência simples, conversacional e sem julgamentos.
+
+O Organiza é um aplicativo de organização financeira pessoal desenvolvido com apoio de inteligência artificial e construído no Lovable. Sua proposta é facilitar o controle financeiro para iniciantes, substituindo formulários extensos por conversas, sem eliminar as alternativas guiadas.
+
+## O que o aplicativo faz
+
+O Organiza permite registrar receitas e despesas por conversa, revisar a interpretação e confirmar antes de salvar.
+
+Exemplo:
+
+> “Gastei R$ 42,90 no almoço ontem.”
+
+O aplicativo interpreta a mensagem e apresenta uma prévia com tipo, valor, data e categoria sugerida. O usuário pode confirmar, corrigir ou cancelar.
+
+### Principais funcionalidades
+
+| Funcionalidade | Descrição |
+|---|---|
+| Registro por conversa | Interpreta receitas e despesas informadas em linguagem natural |
+| Revisão antes de salvar | Apresenta uma prévia para confirmação, correção ou cancelamento |
+| Formulário guiado | Oferece alternativa ao chat, independente da cota de IA |
+| Gestão de transações | Permite consultar, filtrar, editar e excluir lançamentos |
+| Categorias | Sugere classificações e permite correção |
+| Resumos financeiros | Mostra receitas, despesas, resultado e gastos por categoria |
+| Metas | Acompanha valor-alvo, valor reservado informado, progresso e prazo |
+| Agente educativo | Explica os números e apresenta possibilidades de organização |
+| Simulações | Calcula economias hipotéticas sem alterar os registros |
+
+O aplicativo considera apenas os registros adicionados pelo usuário. Não acessa contas bancárias, não movimenta dinheiro e não apresenta o resultado do período como saldo bancário.
+
 ```
 ==================================================
 1. FINALIDADE DESTE DOCUMENTO

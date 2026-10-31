@@ -1,702 +1,328 @@
-# 💸 App de Organização de Finanças Pessoais com Vibe Coding - Feranando Batista
+# MeuPrimeiroEmprego
 
-# Organiza — Finanças pessoais por conversa
+Aplicação web voltada a quem busca a primeira oportunidade em tecnologia. O projeto compara um currículo com uma descrição de vaga, apresenta pontos de compatibilidade e ajuda a organizar uma versão do currículo com foco em clareza e leitura por sistemas de recrutamento.
 
-Organize receitas, despesas e metas com uma experiência simples, conversacional e sem julgamentos.
+A proposta é melhorar a apresentação das informações existentes, sem inventar experiências, qualificações ou resultados.
 
-O Organiza é um aplicativo de organização financeira pessoal desenvolvido com apoio de inteligência artificial e construído no Lovable. Sua proposta é facilitar o controle financeiro para iniciantes, substituindo formulários extensos por conversas, sem eliminar as alternativas guiadas.
+## Aplicação publicada
 
-## O que o aplicativo faz
+- Aplicação: [INSERIR URL PÚBLICA]
+- Repositório: [INSERIR URL DO REPOSITÓRIO]
 
-O Organiza permite registrar receitas e despesas por conversa, revisar a interpretação e confirmar antes de salvar.
+## O problema
 
-Exemplo:
+Quem busca a primeira vaga em tecnologia pode ter conhecimentos relevantes adquiridos em cursos, projetos acadêmicos e laboratórios, mas encontrar dificuldade para apresentar essas experiências de forma alinhada à vaga.
 
-> “Gastei R$ 42,90 no almoço ontem.”
+O MeuPrimeiroEmprego foi criado para ajudar esse público a:
 
-O aplicativo interpreta a mensagem e apresenta uma prévia com tipo, valor, data e categoria sugerida. O usuário pode confirmar, corrigir ou cancelar.
+- Comparar os requisitos de uma vaga com o próprio currículo.
+- Identificar conhecimentos já demonstrados.
+- Perceber requisitos que ainda não aparecem no documento.
+- Reorganizar o currículo sem transformar estudos ou projetos em experiência profissional.
 
-### Principais funcionalidades
+## Público-alvo
 
-| Funcionalidade | Descrição |
+- Estudantes de cursos técnicos e graduação em tecnologia.
+- Pessoas em transição de carreira.
+- Candidatos a estágio ou vagas de nível júnior.
+- Profissionais buscando a primeira oportunidade em TI.
+
+## Funcionalidades
+
+> Antes de publicar este README, marque somente o que foi testado e está funcionando.
+
+- [x] Tela inicial com apresentação da proposta.
+- [x] Formulário para inserir a descrição da vaga e o currículo.
+- [ ] Validação dos campos e dos limites mínimos de caracteres.
+- [ ] Análise de compatibilidade.
+- [ ] Exibição de palavras-chave encontradas.
+- [ ] Exibição de palavras-chave ausentes.
+- [ ] Recomendações de melhoria.
+- [ ] Geração do currículo ajustado.
+- [ ] Cópia do currículo gerado.
+- [ ] Exportação em PDF.
+- [ ] Layout validado em dispositivos móveis.
+
+## Como funciona
+
+### 1. Inserção da vaga
+
+A pessoa cola a descrição da vaga, incluindo responsabilidades, requisitos e diferenciais.
+
+### 2. Inserção do currículo
+
+Em seguida, cola o conteúdo do currículo atual.
+
+Para quem ainda não trabalhou na área, o documento pode apresentar formação, cursos, projetos pessoais, atividades acadêmicas e laboratórios.
+
+### 3. Análise de compatibilidade
+
+A aplicação compara os textos e apresenta os resultados conforme os critérios implementados no projeto.
+
+Descrição da implementação:
+
+[EXPLICAR AQUI COMO A COMPARAÇÃO REALMENTE FUNCIONA: extração de termos, normalização do texto, lista de palavras-chave, uso de IA ou outra abordagem.]
+
+### 4. Apresentação do diagnóstico
+
+O resultado reúne os pontos de alinhamento e os requisitos não identificados no currículo.
+
+Um requisito ausente significa que ele não foi identificado no texto analisado, e não necessariamente que a pessoa não possui aquele conhecimento.
+
+### 5. Ajuste do currículo
+
+A versão ajustada deve reorganizar e destacar informações já presentes no currículo original.
+
+Conhecimentos adquiridos em laboratório devem continuar identificados como laboratório. Projetos acadêmicos não devem ser apresentados como empregos.
+
+### 6. Revisão e exportação
+
+A pessoa revisa o conteúdo antes de copiar, exportar ou utilizar o currículo em uma candidatura.
+
+## Como interpretar o score
+
+O score representa uma estimativa de compatibilidade produzida pelos critérios desta aplicação.
+
+Ele não representa:
+
+- Uma nota emitida pelo sistema de recrutamento de uma empresa.
+- Uma probabilidade de contratação.
+- Uma garantia de aprovação em processos seletivos.
+- Uma avaliação completa da capacidade profissional do candidato.
+
+### Critério de cálculo
+
+[DESCREVER A FÓRMULA REAL IMPLEMENTADA E SE EXISTEM PESOS PARA REQUISITOS OBRIGATÓRIOS E DIFERENCIAIS.]
+
+[INFORMAR COMO O SISTEMA TRATA CORRESPONDÊNCIAS PARCIAIS, SINÔNIMOS E TERMOS NÃO IDENTIFICADOS, CASO ESSES RECURSOS EXISTAM.]
+
+## Regra de integridade
+
+A aplicação deve melhorar a apresentação do currículo sem acrescentar informações não fornecidas.
+
+Não deve inventar:
+
+- Empresas ou vínculos profissionais.
+- Cargos.
+- Datas.
+- Certificações.
+- Formação acadêmica.
+- Conhecimentos técnicos.
+- Resultados ou métricas.
+- Níveis de domínio de ferramentas.
+
+Exemplo de ajuste permitido:
+
+> Reorganizar a descrição de um laboratório de redes para destacar os testes de conectividade já informados no currículo.
+
+Exemplo de ajuste proibido:
+
+> Transformar esse laboratório em experiência profissional de administração de redes corporativas.
+
+## Interface e design
+
+O projeto utiliza uma identidade visual simples, com azul e branco.
+
+### Paleta de referência
+
+| Uso | Cor |
 |---|---|
-| Registro por conversa | Interpreta receitas e despesas informadas em linguagem natural |
-| Revisão antes de salvar | Apresenta uma prévia para confirmação, correção ou cancelamento |
-| Formulário guiado | Oferece alternativa ao chat, independente da cota de IA |
-| Gestão de transações | Permite consultar, filtrar, editar e excluir lançamentos |
-| Categorias | Sugere classificações e permite correção |
-| Resumos financeiros | Mostra receitas, despesas, resultado e gastos por categoria |
-| Metas | Acompanha valor-alvo, valor reservado informado, progresso e prazo |
-| Agente educativo | Explica os números e apresenta possibilidades de organização |
-| Simulações | Calcula economias hipotéticas sem alterar os registros |
-
-O aplicativo considera apenas os registros adicionados pelo usuário. Não acessa contas bancárias, não movimenta dinheiro e não apresenta o resultado do período como saldo bancário.
-
-```
-==================================================
-1. FINALIDADE DESTE DOCUMENTO
-==================================================
-
-Este PRD define a visão, o escopo, os requisitos e os critérios
-de aceite do MVP do Organiza.
-
-É a referência consolidada do produto, não uma autorização
-para implementar todas as funcionalidades de uma só vez.
-
-Se utilizado em um projeto existente:
-- Inspecionar a implementação antes de propor alterações.
-- Preservar dados e funcionalidades corretas.
-- Não reconstruir o aplicativo.
-- Não substituir o backend sem autorização.
-- Não executar migrações destrutivas.
-- Implementar somente a etapa expressamente autorizada.
-- Não publicar automaticamente.
-- Informar divergências entre o PRD e o código existente.
-- Não considerar requisitos descritos como funcionalidades
-  já implementadas ou validadas.
-
-==================================================
-2. VISÃO DO PRODUTO
-==================================================
-
-Criar um aplicativo que ajude pessoas a registrar, compreender
-e acompanhar suas finanças pessoais por meio de conversas simples.
-
-O usuário deve poder informar receitas e despesas em linguagem
-natural, revisar a interpretação e confirmar antes de salvar.
-
-O produto deve combinar:
-- Conversa como caminho principal.
-- Formulário guiado como alternativa equivalente.
-- Resumos financeiros claros.
-- Acompanhamento de metas.
-- Orientações educativas baseadas nos registros.
-- Desenho universal desde a concepção.
-
-O aplicativo não acessa contas bancárias nem movimenta dinheiro
-no MVP.
-
-==================================================
-3. PROBLEMA E HIPÓTESES
-==================================================
-
-Problema a investigar:
-Pessoas iniciantes podem encontrar dificuldade para manter
-um controle financeiro quando precisam preencher muitos campos,
-interpretar termos técnicos ou manter planilhas.
-
-Hipóteses:
-- Registrar por conversa pode reduzir o esforço de entrada.
-- Revisar uma prévia pode aumentar a confiança nos registros.
-- Resumos simples podem facilitar a compreensão dos gastos.
-- Orientações contextualizadas podem incentivar o uso contínuo.
-- Alternativas ao chat podem ampliar a acessibilidade.
-
-Essas hipóteses devem ser validadas com usuários.
-Não apresentá-las como resultados já comprovados.
-
-==================================================
-4. PÚBLICO-ALVO
-==================================================
-
-Pessoas adultas iniciantes em organização financeira.
-
-Considerar diferentes cenários de uso:
-- Baixa familiaridade com tecnologia.
-- Diferentes níveis de compreensão financeira.
-- Pessoas idosas.
-- Pessoas com deficiência visual, motora ou cognitiva.
-- Uso por teclado, leitor de tela ou ampliação.
-- Dispositivos pequenos.
-- Conexão limitada ou instável.
-
-Não exigir coleta de características pessoais para oferecer
-uma experiência acessível.
-
-==================================================
-5. OBJETIVOS
-==================================================
-
-- Facilitar o registro de receitas e despesas.
-- Permitir revisão, correção e cancelamento.
-- Classificar transações com sugestões corrigíveis.
-- Mostrar receitas, despesas e resultado do período.
-- Apresentar despesas por categoria.
-- Acompanhar metas com valores informados pelo usuário.
-- Explicar os números com linguagem educativa e não julgadora.
-- Oferecer alternativas de interação equivalentes ao chat.
-- Proteger os dados e isolar as contas.
-
-==================================================
-6. PRINCIPAIS TELAS
-==================================================
-
-1. Acesso:
-   Cadastro, login e recuperação de acesso.
-
-2. Introdução:
-   Explicação do funcionamento, exemplos e aviso sobre IA.
-
-3. Conversa:
-   Registro por linguagem natural, prévias e orientações.
-
-4. Transações:
-   Listagem, filtros, consulta, edição e exclusão.
-
-5. Resumo:
-   Receitas, despesas, resultado e categorias por período.
-
-6. Metas:
-   Cadastro e acompanhamento de objetivos financeiros.
-
-7. Configurações:
-   Preferências, privacidade e gestão de dados.
-
-Todas as telas devem ter estados aplicáveis de:
-- Carregamento.
-- Ausência de dados.
-- Sucesso.
-- Erro.
-- Falha de conexão.
-- Sessão expirada.
-
-==================================================
-7. AUTENTICAÇÃO E PERFIL
-==================================================
-
-Implementar:
-- Cadastro por e-mail e senha.
-- Login.
-- Logout.
-- Recuperação de acesso.
-- Tratamento de sessão expirada.
-- Proteção das áreas privadas.
-
-Preferências:
-- Fuso horário.
-- Idioma.
-- Moeda.
-- Ocultar valores na interface.
-
-Regras:
-- Usar o provedor de autenticação adotado pelo projeto.
-- Não criar mecanismo próprio de armazenamento de senhas.
-- Não expor credenciais privilegiadas no frontend.
-- Permitir colagem e gerenciadores de senha.
-- Identificar o usuário pela sessão autenticada.
-- Não confiar em user_id enviado pelo navegador como autorização.
-- Não confundir conta do usuário com perfil público.
-
-==================================================
-8. REGISTRO POR CONVERSA
-==================================================
-
-Interpretar:
-- Intenção.
-- Tipo: receita ou despesa.
-- Valor.
-- Data.
-- Descrição, quando disponível.
-- Categoria sugerida.
-
-Exemplo:
-"Gastei 42,90 no almoço ontem."
-
-Fluxo:
-1. Receber a mensagem.
-2. Identificar intenção e extrair campos.
-3. Perguntar quando faltar informação obrigatória.
-4. Apresentar prévia.
-5. Permitir confirmar, corrigir ou cancelar.
-6. Validar no backend.
-7. Salvar após confirmação.
-8. Atualizar a interface após sucesso.
-
-Regras:
-- Valor e tipo são obrigatórios.
-- Valor deve ser maior que zero.
-- Nunca inventar valor.
-- Não inventar estabelecimento ou descrição.
-- Quando faltar data, sugerir hoje e exibir a data completa.
-- Resolver datas relativas conforme o fuso do perfil.
-- Esclarecer datas ambíguas.
-- Fazer perguntas curtas, preferencialmente uma por vez.
-- Usar categorias padrão ou do próprio usuário.
-- Se não houver categoria adequada, sugerir Outros.
-- Permitir corrigir a categoria.
-- Mensagens hipotéticas não geram registros.
-- Perguntas educativas não geram registros.
-- Intenções mistas ou ambíguas exigem esclarecimento.
-- Não interpretar automaticamente situações fora do escopo,
-  como parcelamentos ou transferências ambíguas.
-
-Mensagens com várias transações:
-- Apresentar cada transação para revisão.
-- Confirmar explicitamente o conjunto.
-- Evitar gravação parcial sem tratamento claro.
-
-==================================================
-9. PRÉVIA, CONFIRMAÇÃO E IDEMPOTÊNCIA
-==================================================
-
-A prévia deve mostrar:
-- Tipo.
-- Valor em BRL.
-- Data completa.
-- Descrição, quando disponível.
-- Categoria sugerida.
-
-Ações:
-- Confirmar.
-- Corrigir.
-- Cancelar.
-
-Regras:
-- Não persistir a transação antes da confirmação.
-- Vincular a confirmação à versão exata da prévia.
-- Alterar a prévia invalida a confirmação anterior.
-- Revalidar sessão, campos e categoria ao confirmar.
-- Uma mesma operação reenviada não pode gerar duplicata.
-- Garantir idempotência no backend/banco.
-- Não depender somente de desabilitar o botão.
-- Transações semelhantes podem gerar aviso, não bloqueio automático.
-- Exibir sucesso somente após confirmação do backend.
-- Em falha de gravação ambígua, verificar o estado da operação
-  antes de reenviar.
-- Cancelar não cria transação.
-
-==================================================
-10. FORMULÁRIO GUIADO E TRANSAÇÕES
-==================================================
-
-Oferecer alternativa acessível ao chat.
-
-Campos:
-- Tipo.
-- Valor.
-- Data.
-- Descrição opcional.
-- Categoria.
-
-Permitir:
-- Criar.
-- Consultar.
-- Filtrar.
-- Editar.
-- Excluir com confirmação.
-
-Regras:
-- Preservar os dados digitados em falhas recuperáveis.
-- Não apresentar sucesso falso.
-- Manter o formulário independente da cota de IA.
-- Não prometer funcionamento durante indisponibilidade
-  de rede, sessão ou backend.
-- Não armazenar rascunhos financeiros persistentemente
-  no navegador sem uma decisão explícita de privacidade
-
-
-
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
- 
-==================================================
-11. CATEGORIAS
-==================================================
-
-Oferecer categorias padrão e personalizadas.
-
-Categorias padrão sugeridas:
-Receitas:
-- Salário.
-- Freelance.
-- Rendimentos.
-- Outros.
-
-Despesas:
-- Alimentação.
-- Moradia.
-- Transporte.
-- Saúde.
-- Educação.
-- Lazer.
-- Assinaturas.
-- Compras.
-- Outros.
-
-Regras:
-- Categorias padrão são somente leitura para usuários comuns.
-- Categorias personalizadas pertencem ao criador.
-- Não permitir vincular categoria privada de outra pessoa.
-- Agrupar por identificador, não apenas pelo nome.
-- Renomear categoria preserva suas relações.
-- Não excluir silenciosamente categoria em uso.
-- Exigir reclassificação ou aplicar outra regra segura
-  explicitamente definida.
-
-==================================================
-12. RESUMOS FINANCEIROS
-==================================================
-
-Exibir:
-- Total de receitas.
-- Total de despesas.
-- Resultado: receitas menos despesas.
-- Despesas por categoria.
-- Participação percentual de cada categoria.
-
-Períodos:
-- Mês atual, como padrão.
-- Mês anterior.
-- Personalizado.
-
-Regras:
-- Filtrar pela data da transação.
-- Incluir início e fim do intervalo.
-- Impedir início posterior ao fim.
-- Usar o fuso do perfil para determinar hoje e mês atual.
-- Tratar colunas DATE como datas civis, sem mudar o dia por UTC.
-- Considerar todos os registros autorizados do período.
-- Não limitar totais à página carregada da listagem.
-- Incluir registros de chat e formulário sem duplicação.
-- Excluir registros removidos.
-- Não incluir prévias, rascunhos ou falhas.
-- Não incluir metas como receitas ou despesas.
-- Agrupar transações sem categoria em "Sem categoria".
-- Tratar divisão por zero.
-- Arredondar percentuais somente para apresentação.
-- Ordenar categorias por despesa, do maior para o menor.
-- Não usar dados demonstrativos em contas reais.
-
-Exibir:
-"Este resumo considera apenas os registros adicionados ao aplicativo."
-
-Não chamar o resultado de:
-- Saldo bancário.
-- Dinheiro disponível.
-- Valor confirmado em conta.
-
-Falhas:
-- Erro de consulta não pode aparecer como valor zerado.
-- Diferenciar período vazio de falha do backend.
-- Oferecer nova tentativa.
-- Não apresentar dados de um período como se fossem de outro.
-
-==================================================
-13. METAS
-==================================================
-
-Campos:
-- Nome.
-- Valor-alvo.
-- Valor informado como reservado.
-- Prazo opcional.
-
-Exibir:
-- Valor-alvo.
-- Reservado.
-- Valor restante.
-- Progresso percentual.
-- Excedente.
-- Prazo e estado.
-
-Cálculos:
-- Restante = máximo entre alvo - reservado e zero.
-- Progresso = reservado / alvo × 100.
-
-Regras:
-- Alvo maior que zero.
-- Reservado não negativo.
-- Permitir reservado acima do alvo.
-- Mostrar "Meta atingida" quando aplicável.
-- Mostrar excedente.
-- Barra visual pode parar em 100%.
-- Texto preserva o progresso real acima de 100%.
-- Prazo vencido não impede atualização.
-- Não movimentar dinheiro.
-- Não criar transação automática.
-- Não afirmar que o valor foi verificado em conta.
-
-Usar:
-"Valor informado como reservado".
-
-Contribuição mensal sugerida permanece fora do MVP inicial.
-
-==================================================
-14. AGENTE FINANCEIRO EDUCATIVO
-==================================================
-
-Oferecer acesso "Entender meus números".
-
-Ações sugeridas:
-- Explique meu resumo.
-- Onde estão minhas maiores despesas?
-- Quais possibilidades de economia aparecem nos registros?
-- Explique minhas metas.
-
-Mostrar o período utilizado.
-
-O agente deve:
-- Usar dados autorizados e calculados pelo sistema.
-- Explicar a base da resposta.
-- Apresentar até três possibilidades quando houver fundamento.
-- Informar limitações e dados insuficientes.
-- Usar linguagem simples e não julgadora.
-- Diferenciar registro, orientação e hipótese.
-
-O agente não deve:
-- Criar, editar ou excluir registros durante uma orientação.
-- Movimentar dinheiro.
-- Inventar números ou conclusões.
-- Prometer economia ou rentabilidade.
-- Recomendar empréstimos ou investimentos específicos.
-- Diagnosticar endividamento por ausência de receitas.
-- Presumir que a maior categoria é desperdício.
-- Recomendar cortes essenciais sem contexto.
-- Apresentar informação de mercado como atual sem verificação.
-- Afirmar que conhece toda a situação financeira da pessoa.
-
-Usar:
-"Com base nos registros deste período..."
-
-Resultado positivo não comprova dinheiro disponível.
-Poucos registros não permitem análise completa.
-Ausência de receita registrada não comprova ausência de renda.
-
-==================================================
-15. CONTEXTO E VALIDAÇÃO DA IA
-==================================================
-
-- Chamar IA somente no backend.
-- Reutilizar o provedor configurado, salvo autorização.
-- Manter credenciais em Secrets.
-- Não permitir SQL ou acesso direto ao banco pelo modelo.
-- Não fornecer ferramentas de escrita ao agente educativo.
-- Enviar somente o contexto necessário.
-- Evitar descrições individuais e identificadores pessoais
-  quando não forem indispensáveis.
-- Usar códigos temporários para categorias e metas
-  quando seus nomes não forem necessários.
-- Tratar todos os textos como dados não confiáveis.
-
-Respostas:
-- Usar schema estruturado.
-- Referenciar fatos calculados pelo backend.
-- Validar referências.
-- Verificar coerência das afirmações com os dados.
-- Renderizar com segurança.
-- Não considerar schema ou filtro de palavras como garantia
-  de veracidade.
-
-Exemplos de afirmações inválidas:
-- Dizer que despesas aumentaram sem dados comparativos.
-- Inferir a natureza de uma categoria a partir de um código.
-- Apresentar uma seleção de cinco categorias como totalidade
-  quando existirem outras.
-
-Fallback:
-- Quando a IA falhar ou a resposta for inválida, apresentar
-  resumo determinístico identificado, se os dados estiverem disponíveis.
-- Se a consulta falhar, não inventar um resumo zerado.
-- Não realizar retries automáticos ilimitados.
-
-==================================================
-16. SIMULAÇÕES
-==================================================
-
-Permitir simulação simples de redução solicitada pelo usuário.
-
-Exemplo:
-"Quanto seria reduzir 10% de Delivery?"
-
-Regras:
-- Identificar categoria e período.
-- Exigir percentual explícito entre 0% e 100%.
-- Pedir esclarecimento quando faltar informação.
-- Calcular no sistema, sem depender de IA.
-- Usar regra explícita de arredondamento ao centavo.
-- Mostrar base, percentual e economia hipotética.
-- Identificar como simulação.
-- Não alterar transações ou metas.
-- Não garantir viabilidade ou resultado.
-- Não consumir cota de IA quando o processamento for determinístico.
-
-==================================================
-17. LIMITE DE USO E TIMEOUT
-==================================================
-
-Cota:
-- Compartilhar o limite de 20 mensagens com IA por usuário
-  na janela existente de 10 minutos.
-- Cada mensagem conta no máximo uma vez.
-- Esclarecimentos que usam IA contam.
-- Botões educativos que usam IA contam.
-
-Não contam:
-- Confirmar por botão.
-- Corrigir pela edição guiada.
-- Cancelar por botão.
-- Formulário.
-- Resumos determinísticos.
-- Simulações sem IA.
-
-Regras:
-- Controlar a cota atomicamente no backend/banco.
-- Não criar cota adicional independente para orientações.
-- Evitar chamadas internas desnecessárias.
-- Documentar quantas chamadas cada caminho pode realizar.
-- Ao atingir o teto, oferecer alternativas sem IA.
-- Créditos da plataforma não devem ser descritos como reais.
-
-Timeout:
-- Implementar limite explícito no backend.
-- Valor inicial proposto: 30 segundos, sujeito à compatibilidade
-  com a plataforma e avaliação operacional.
-- Se houver múltiplas chamadas no pedido, compartilhar o orçamento.
-- Tentar cancelar upstream quando suportado.
-- Descartar respostas tardias.
-- Encerrar carregamento e apresentar alternativa clara.
-- Não prometer que cancelamento elimina cobrança.
-- Não confundir timeout de interpretação com timeout de gravação.
-
-==================================================
-18. ARQUITETURA E DADOS
-==================================================
-
-Reutilizar a arquitetura existente do projeto.
-
-Entidades principais:
-- Perfis.
-- Transações.
-- Categorias.
-- Metas.
-- Controle de operações/idempotência.
-- Controle de uso de IA.
-
-Princípios:
-- Valores monetários em centavos inteiros.
-- Evitar perda de precisão entre banco, backend e frontend.
-- Data da transação separada do horário de criação.
-- Dados pessoais associados ao usuário autenticado.
-- Constraints e validação no backend/banco.
-- Não adicionar persistência de conversa sem decisão explícita.
-- Migrações devem preservar registros existentes.
-
-==================================================
-19. SEGURANÇA E ISOLAMENTO
-==================================================
-
-- Aplicar RLS às tabelas pessoais expostas.
-- Autorizar leitura e escrita por usuário.
-- Proteger totais, funções, views e endpoints.
-- Não confiar apenas na interface.
-- Preferir SECURITY INVOKER para novas funções quando aplicável.
-- Verificar identidade, permissões e políticas em conjunto.
-- Não criar SECURITY DEFINER sem necessidade justificada
-  e autorização explícita.
-- Não usar credencial privilegiada para contornar isolamento.
-- Usuário sem sessão não recebe dados financeiros.
-
-Cache e concorrência:
-- Separar cache por usuário e filtros.
-- Limpar dados pessoais no logout.
-- Impedir dados da conta anterior na troca de sessão.
-- Ignorar respostas antigas após mudança de usuário ou período.
-- Não permitir que uma resposta atrasada sobrescreva estado atual.
-
-==================================================
-20. PRIVACIDADE E GESTÃO DE DADOS
-==================================================
-
-Antes do piloto externo:
-- Definir responsável e canal de contato.
-- Documentar finalidades e dados tratados.
-- Revisar base legal de cada tratamento.
-- Informar processamento por IA e fornecedores.
-- Definir retenção e exclusão.
-- Verificar configurações e condições do provedor.
-- Documentar limites de backups e logs.
-- Disponibilizar exportação dos registros do usuário.
-- Disponibilizar fluxo de exclusão ou solicitação de exclusão
-  de conta e dados.
-
-Não:
-- Prometer ausência de retenção sem verificação.
-- Afirmar conformidade jurídica apenas por existir aviso.
-- Considerar CSV, isoladamente, prova de cumprimento de todos
-  os requisitos de portabilidade.
-- Tratar exclusão de um lançamento como exclusão da conta inteira.
-
-Esses itens fazem parte do fechamento do MVP.
-Ainda precisam de implementação ou definição quando ausentes.
-
-==================================================
-21. DESENHO UNIVERSAL E ACESSIBILIDADE
-==================================================
-
-Aplicar:
-- Uso equitativo.
-- Flexibilidade.
-- Simplicidade.
-- Informação perceptível.
-- Tolerância ao erro.
-- Baixo esforço.
-- Espaço adequado para interação.
-
-Adotar WCAG 2.2 AA como referência de avaliação.
-
-Requisitos:
-- Chat não é o único caminho.
-- Teclado sem aprisionamento de foco.
-- Foco visível e não oculto.
-- Labels e nomes acessíveis.
-- Erros com orientação de correção.
-- Contraste adequado.
-- Informação não dependente apenas de cor.
-- Ampliação de texto a 200%.
-- Reflow conforme critérios aplicáveis.
-- Controles de toque de 44 × 44 pixels CSS como padrão.
-- Gráficos com tabela ou lista equivalente.
-- Não depender de hover.
-- Respeitar redução de movimento.
-- Não animar respostas letra por letra.
-- Não mover foco a cada mensagem.
-- Anunciar atualizações sem reler toda a conversa.
-- Não impor tempo curto para revisão.
-
-Testes automatizados ou inspeção de atributos não substituem
-avaliação manual com tecnologias assistivas.
-```
-
-O Organiza é um aplicativo de organização financeira pessoal que facilita o controle de receitas, despesas e metas.
-
-Suas principais funções são:
-
-Registrar receitas e despesas por conversa, com revisão e confirmação antes de salvar.
-
-Oferecer um formulário guiado como alternativa ao chat.
-
-Sugerir categorias e permitir consultar, editar e excluir lançamentos.
-
-Mostrar resumos por período, com receitas, despesas, resultado e gastos por categoria.
-
-Acompanhar metas, incluindo valor-alvo, valor informado como reservado, progresso e prazo.
-
-Explicar os números com um agente de IA educativo, sem julgamentos ou promessas de resultado.
-
-Simular possíveis economias sem alterar os registros.
-
-
-Site:  https://organizachat.lovable.app
-
-<img width="333" height="405" alt="{EDFEC6BF-6060-4ABC-8EDF-D48C730FD751}" src="https://github.com/user-attachments/assets/d51c6175-9149-43f4-9df3-b0c7e41edf0c" />
-
-<img width="675" height="804" alt="image" src="https://github.com/user-attachments/assets/986e5ab0-6936-4a0e-9949-09cd4628924f" />
-
-<img width="383" height="417" alt="{16B25540-16D9-4713-B1CB-68CC1087ED11}" src="https://github.com/user-attachments/assets/6085055f-5439-4a0e-a34c-6d3ddd103ec8" />
-
-<img width="379" height="404" alt="{B9967CFC-7BE7-4806-9BAA-4C6462736FD4}" src="https://github.com/user-attachments/assets/871b10d8-8530-4f58-9e3b-8d7a5f3151fe" />
+| Fundo principal | `#FFFFFF` |
+| Azul primário | `#1D4ED8` |
+| Azul escuro | `#1E3A8A` |
+| Azul claro | `#DBEAFE` |
+| Superfície secundária | `#F8FAFC` |
+| Texto principal | `#0F172A` |
+| Texto secundário | `#475569` |
 
+### Diretrizes
+
+- Interface em português.
+- Hierarquia visual clara.
+- Formulários com rótulos e instruções.
+- Feedback para ações e erros.
+- Layout com foco em leitura e simplicidade.
+- Componentes baseados em shadcn/ui, conforme a especificação inicial.
+
+## Tecnologias
+
+O projeto foi desenvolvido com auxílio do Lovable.
+
+[CONFERIR O CÓDIGO E LISTAR AQUI SOMENTE AS TECNOLOGIAS REALMENTE UTILIZADAS.]
+
+Exemplos de itens a verificar no repositório:
+
+- Framework da interface.
+- Linguagem.
+- Biblioteca de estilos.
+- Biblioteca de componentes.
+- Biblioteca de exportação em PDF.
+- Serviço ou modelo de IA, caso exista.
+
+## Processo de construção
+
+### 1. Definição do escopo
+
+O escopo inicial priorizou o fluxo principal:
+
+1. Colar a descrição da vaga.
+2. Colar o currículo.
+3. Executar a análise.
+4. Consultar o diagnóstico.
+5. Revisar o currículo ajustado.
+6. Exportar o resultado.
+
+Login, histórico e dashboard não foram priorizados na proposta do MVP.
+
+### 2. Mega prompt utilizado
+
+O prompt foi organizado em blocos:
+
+- Contexto e objetivo.
+- Público-alvo.
+- Regra de não invenção de informações.
+- Telas e navegação.
+- Fluxo da análise.
+- Regras do currículo ajustado.
+- Design system.
+- Estados da interface.
+- Limites do MVP.
+
+<details>
+<summary>Ver o mega prompt utilizado</summary>
+
+[COLAR AQUI O PROMPT EXATO ENVIADO AO LOVABLE.]
+
+</details>
+
+### 3. Evolução do prompt
+
+[EXPLICAR O QUE MUDOU ENTRE A PRIMEIRA IDEIA E A VERSÃO UTILIZADA.]
+
+| Etapa | Decisão ou mudança | Motivo |
+|---|---|---|
+| Definição do público | Foco na primeira oportunidade em tecnologia | Direcionar a linguagem e os cenários de uso |
+| Identidade visual | Azul e branco | Manter uma apresentação simples e consistente |
+| Escopo inicial | Priorizar análise e currículo ajustado | Reduzir a complexidade da primeira versão |
+| [Outra etapa] | [Mudança realizada] | [Motivo] |
+
+### 4. Refinamentos após a primeira geração
+
+[REGISTRAR APENAS AJUSTES QUE VOCÊ REALMENTE PEDIU OU IMPLEMENTOU.]
+
+| Ajuste | Problema observado | Resultado |
+|---|---|---|
+| [Ajuste realizado] | [Problema] | [Resultado validado] |
+
+## Testes
+
+Foram preparados cenários fictícios para avaliar a comparação e a preservação das informações do candidato.
+
+Os dados de teste não representam pessoas ou empresas reais.
+
+### Cenários
+
+| Cenário | O que verificar |
+|---|---|
+| Candidato a suporte júnior com conhecimentos parciais | Identificação de competências presentes e lacunas |
+| Mesmo candidato com laboratórios adicionais | Reconhecimento das novas evidências |
+| Candidata de front-end concorrendo à vaga de suporte | Diferenciação entre os perfis técnicos |
+| Repetição das mesmas entradas | Consistência do resultado |
+| Campos vazios ou abaixo do mínimo | Validação e mensagens claras |
+| Currículo ajustado | Ausência de experiências inventadas |
+| Exportação em PDF | Integridade do texto e da formatação |
+
+### Resultados registrados
+
+[EXECUTAR OS TESTES E PREENCHER A TABELA.]
+
+| Teste | Resultado observado | Status |
+|---|---|---|
+| Compatibilidade parcial | [Preencher] | Pendente |
+| Inclusão de laboratórios | [Preencher] | Pendente |
+| Perfil diferente da vaga | [Preencher] | Pendente |
+| Consistência da análise | [Preencher] | Pendente |
+| Validação dos campos | [Preencher] | Pendente |
+| Preservação das informações | [Preencher] | Pendente |
+| Exportação em PDF | [Preencher] | Pendente |
+
+## Evidências de funcionamento
+
+[ADICIONAR CAPTURAS REAIS DA APLICAÇÃO NESTA SEÇÃO.]
+
+Sugestões de evidências:
+
+1. Tela inicial.
+2. Formulário preenchido com dados fictícios.
+3. Diagnóstico de compatibilidade.
+4. Currículo ajustado.
+5. PDF exportado.
+
+Incluir somente imagens e arquivos que realmente estejam disponíveis no repositório.
+
+## Privacidade e tratamento dos dados
+
+[DESCREVER O COMPORTAMENTO REAL DA IMPLEMENTAÇÃO.]
+
+Informar:
+
+- Se o processamento ocorre no navegador ou em um servidor.
+- Se algum texto é enviado a um serviço de IA.
+- Se há armazenamento dos dados.
+- Como os dados podem ser removidos, caso sejam armazenados.
+
+Não afirmar que os dados permanecem no navegador sem verificar o código e as requisições da aplicação.
+
+Para demonstrações públicas e testes, utilizar dados fictícios.
+
+## Limitações
+
+- O resultado depende da qualidade dos textos fornecidos.
+- A ausência de um termo não comprova a ausência de uma competência.
+- O score não reproduz necessariamente os critérios de sistemas de recrutamento.
+- O currículo ajustado exige revisão humana antes do envio.
+- A aplicação não garante entrevistas, aprovação ou contratação.
+- [ACRESCENTAR LIMITAÇÕES ESPECÍFICAS DA IMPLEMENTAÇÃO.]
+
+## Executar localmente
+
+[ADICIONAR OS PRÉ-REQUISITOS E OS COMANDOS REAIS APÓS CONFERIR OS ARQUIVOS DO PROJETO.]
+
+Documentar:
+
+1. Como clonar o repositório.
+2. Como instalar as dependências.
+3. Como configurar variáveis de ambiente, se necessário.
+4. Como iniciar o ambiente de desenvolvimento.
+
+Nunca incluir chaves, tokens ou senhas neste README ou no código versionado.
+
+## Possíveis evoluções
+
+- Exportação em `.docx`.
+- Histórico de análises.
+- Autenticação.
+- Comparação entre versões do currículo.
+- Suporte a outros idiomas.
+- Explicação mais detalhada dos critérios de compatibilidade.
+
+Esses itens são possibilidades futuras e não funcionalidades disponíveis.
+
+## Aprendizados
+
+[PREENCHER COM A SUA EXPERIÊNCIA NO PROJETO.]
+
+Pontos que podem ser abordados:
+
+- Como a especificação influenciou a primeira versão.
+- Quais resultados exigiram revisão.
+- Como foram testadas as regras de não invenção.
+- Quais decisões ajudaram a manter o MVP simples.
+- O que você faria diferente em uma próxima versão.
+
+## Autor
+
+Fernando Batista Vieira da Silva
+
+- GitHub: [INSERIR PERFIL]
+- LinkedIn: [INSERIR PERFIL, SE DESEJAR]

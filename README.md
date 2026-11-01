@@ -1,4 +1,4 @@
-# MeuPrimeiroEmprego
+# Primeiro Emprego TI
 
 Aplicação web voltada a quem busca a primeira oportunidade em tecnologia. O projeto compara um currículo com uma descrição de vaga, apresenta pontos de compatibilidade e ajuda a organizar uma versão do currículo com foco em clareza e leitura por sistemas de recrutamento.
 
@@ -6,8 +6,8 @@ A proposta é melhorar a apresentação das informações existentes, sem invent
 
 ## Aplicação publicada
 
-- Aplicação: [INSERIR URL PÚBLICA]
-- Repositório: [INSERIR URL DO REPOSITÓRIO]
+- Aplicação: [primeiroempregoti.lovable.app]
+
 
 ## O problema
 
@@ -373,12 +373,6 @@ Implemente:
 6. Geração do currículo;
 7. Exportação em PDF;
 8. Revisão de responsividade e acessibilidade.
-
-Antes de escrever o código, faça perguntas se algo essencial não estiver claro.</summary>
-
-[COLAR AQUI O PROMPT EXATO ENVIADO AO LOVABLE.]
-
-</details>
 
 
 ## Testes

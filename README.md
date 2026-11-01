@@ -380,24 +380,6 @@ Antes de escrever o código, faça perguntas se algo essencial não estiver clar
 
 </details>
 
-### 3. Evolução do prompt
-
-[EXPLICAR O QUE MUDOU ENTRE A PRIMEIRA IDEIA E A VERSÃO UTILIZADA.]
-
-| Etapa | Decisão ou mudança | Motivo |
-|---|---|---|
-| Definição do público | Foco na primeira oportunidade em tecnologia | Direcionar a linguagem e os cenários de uso |
-| Identidade visual | Azul e branco | Manter uma apresentação simples e consistente |
-| Escopo inicial | Priorizar análise e currículo ajustado | Reduzir a complexidade da primeira versão |
-| [Outra etapa] | [Mudança realizada] | [Motivo] |
-
-### 4. Refinamentos após a primeira geração
-
-[REGISTRAR APENAS AJUSTES QUE VOCÊ REALMENTE PEDIU OU IMPLEMENTOU.]
-
-| Ajuste | Problema observado | Resultado |
-|---|---|---|
-| [Ajuste realizado] | [Problema] | [Resultado validado] |
 
 ## Testes
 
@@ -416,20 +398,6 @@ Os dados de teste não representam pessoas ou empresas reais.
 | Campos vazios ou abaixo do mínimo | Validação e mensagens claras |
 | Currículo ajustado | Ausência de experiências inventadas |
 | Exportação em PDF | Integridade do texto e da formatação |
-
-### Resultados registrados
-
-[EXECUTAR OS TESTES E PREENCHER A TABELA.]
-
-| Teste | Resultado observado | Status |
-|---|---|---|
-| Compatibilidade parcial | [Preencher] | Pendente |
-| Inclusão de laboratórios | [Preencher] | Pendente |
-| Perfil diferente da vaga | [Preencher] | Pendente |
-| Consistência da análise | [Preencher] | Pendente |
-| Validação dos campos | [Preencher] | Pendente |
-| Preservação das informações | [Preencher] | Pendente |
-| Exportação em PDF | [Preencher] | Pendente |
 
 ## Evidências de funcionamento
 

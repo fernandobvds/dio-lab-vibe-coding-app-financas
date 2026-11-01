@@ -11,7 +11,7 @@ A proposta é melhorar a apresentação das informações existentes, sem invent
 
 ## O problema
 
-Quem busca a primeira vaga em tecnologia pode ter conhecimentos relevantes adquiridos em cursos, projetos acadêmicos e laboratórios, mas encontrar dificuldade para apresentar essas experiências de forma alinhada à vaga.
+Quem busca a primeira vaga em tecnologia pode ter conhecimentos relevantes adquiridos em cursos, projetos acadêmicos e laboratórios, mas encontram dificuldade para apresentar essas experiências de forma alinhada à vaga.
 
 O MeuPrimeiroEmprego foi criado para ajudar esse público a:
 
@@ -47,7 +47,7 @@ O MeuPrimeiroEmprego foi criado para ajudar esse público a:
 
 ### 1. Inserção da vaga
 
-A pessoa cola a descrição da vaga, incluindo responsabilidades, requisitos e diferenciais.
+O candidato cola a descrição da vaga, incluindo responsabilidades, requisitos e diferenciais.
 
 ### 2. Inserção do currículo
 
@@ -90,11 +90,9 @@ Ele não representa:
 - Uma garantia de aprovação em processos seletivos.
 - Uma avaliação completa da capacidade profissional do candidato.
 
-### Critério de cálculo
+### Como funciona
 
-[DESCREVER A FÓRMULA REAL IMPLEMENTADA E SE EXISTEM PESOS PARA REQUISITOS OBRIGATÓRIOS E DIFERENCIAIS.]
-
-[INFORMAR COMO O SISTEMA TRATA CORRESPONDÊNCIAS PARCIAIS, SINÔNIMOS E TERMOS NÃO IDENTIFICADOS, CASO ESSES RECURSOS EXISTAM.]
+O MeuPrimeiroEmprego realiza uma análise de compatibilidade determinística e 100% local no navegador (src/lib/analyzer.ts). O motor confronta o texto da vaga contra um dicionário fixo de 53 tecnologias e competências com suporte a sinônimos e correspondências parciais, calculando um índice de compatibilidade de 0 a 100% com base nos termos encontrados. Em seguida, o currículo fornecido é reorganizado em seções padronizadas para leitura por ATS, priorizando na seção de habilidades os termos já declarados pelo candidato que coincidem com a vaga. Nenhuma informação nova é inventada ou adicionada ao currículo, não há uso de inteligência artificial generativa e nenhum dado é transmitido para servidores externos, permanecendo restrito à memória de sessão do navegador.
 
 ## Regra de integridade
 
@@ -148,7 +146,6 @@ O projeto utiliza uma identidade visual simples, com azul e branco.
 
 O projeto foi desenvolvido com auxílio do Lovable.
 
-[CONFERIR O CÓDIGO E LISTAR AQUI SOMENTE AS TECNOLOGIAS REALMENTE UTILIZADAS.]
 
 Exemplos de itens a verificar no repositório:
 
@@ -189,7 +186,195 @@ O prompt foi organizado em blocos:
 - Limites do MVP.
 
 <details>
-<summary>Ver o mega prompt utilizado</summary>
+<summary># Mega Prompt — [MeuPrimeiroEmprego]
+
+## 1. Contexto
+Você é um desenvolvedor front-end sênior. Crie um aplicativo web chamado
+**[MeuPrimeiroEmprego]** usando React, TypeScript, Tailwind CSS e shadcn/ui.
+
+O app ajuda pessoas a adaptar o currículo a uma vaga antes de se candidatarem destinada apenas para o publico de tecnologia.
+Ele compara o currículo com a descrição da vaga, identifica alinhamentos e
+lacunas e gera uma versão ATS friendly.
+
+## 2. Regra inegociável
+O app NUNCA deve inventar experiência, emprego, certificação, formação,
+tecnologia, data ou conquista.
+
+Ele pode apenas:
+- Reorganizar informações existentes;
+- Destacar experiências relevantes para a vaga;
+- Sugerir substituições de termos quando houver equivalência real;
+- Recomendar que o usuário adicione manualmente uma informação verdadeira.
+
+Exiba este aviso em local visível:
+“Este app melhora a apresentação do seu currículo, mas nunca inventa
+experiência ou qualificação.”
+
+## 3. Escopo do MVP
+Construa apenas:
+- Tela inicial;
+- Formulário de análise;
+- Tela de resultado;
+- Geração do currículo ajustado;
+- Exportação em PDF.
+
+Não implemente login, banco de dados, histórico, integrações externas,
+pagamento ou painel administrativo.
+
+## 4. Telas
+
+### Tela 1 — Início
+Objetivo: explicar o app em 10 segundos e levar o usuário à análise.
+
+Elementos:
+- Header com logotipo textual “[Nome]” e botão “Analisar currículo”;
+- Hero com título “[sua promessa principal]”;
+- Subtítulo explicando entrada: vaga + currículo;
+- Três cards: “Cole a vaga”, “Cole o currículo”, “Receba a versão ATS”;
+- Aviso sobre não invenção de experiência;
+- CTA principal: “Começar análise”.
+
+### Tela 2 — Análise
+Objetivo: coletar os dois textos.
+
+Elementos:
+- Campo 1: “Descrição da vaga” — textarea grande;
+- Campo 2: “Seu currículo atual” — textarea grande;
+- Contador de caracteres para ambos;
+- Botão “Analisar compatibilidade”, desabilitado até os dois campos
+  terem conteúdo mínimo;
+- Botão “Limpar”;
+- Estado de carregamento durante a análise.
+
+Validações:
+- Vaga: mínimo de [200] caracteres;
+- Currículo: mínimo de [500] caracteres;
+- Mensagens de erro claras em português.
+
+### Tela 3 — Resultado
+Objetivo: mostrar o diagnóstico antes do currículo final.
+
+Seções:
+1. **Score de compatibilidade**
+   - Percentual de 0 a 100;
+   - Explicação curta do resultado;
+   - Barra de progresso.
+
+2. **Palavras-chave encontradas**
+   - Badges com termos presentes na vaga e no currículo.
+
+3. **Palavras-chave ausentes ou fracas**
+   - Badges com termos relevantes da vaga que não aparecem no currículo;
+   - Para cada termo, uma sugestão honesta: onde poderia existir evidência
+     real ou se deve ser ignorado.
+
+4. **Recomendações**
+   - Lista de 3 a 7 ajustes práticos;
+   - Cada item deve indicar o motivo e não pedir invenção de conteúdo.
+
+5. **Currículo ATS friendly**
+   - Texto gerado em seções claras;
+   - Botão “Copiar texto”;
+   - Botão “Exportar PDF”.
+
+## 5. Fluxo da análise
+
+1. Usuário cola a descrição da vaga.
+2. Usuário cola o currículo.
+3. Usuário clica em “Analisar compatibilidade”.
+4. O sistema extrai termos relevantes da vaga: hard skills, ferramentas,
+   responsabilidades, requisitos e diferenciais.
+5. O sistema compara esses termos com o currículo.
+6. O sistema calcula um score de compatibilidade.
+7. O sistema classifica termos como:
+   - Encontrado;
+   - Parcialmente encontrado;
+   - Ausente.
+8. O sistema gera recomendações apenas com base em informações reais do currículo.
+9. O sistema reescreve o currículo em formato ATS friendly.
+10. O usuário revisa, copia ou exporta em PDF.
+
+## 6. Regras do currículo ATS friendly
+
+- Usar títulos de seção padrão: Resumo, Experiência, Formação, Habilidades;
+- Manter ordem cronológica inversa;
+- Usar linguagem objetiva e verbos de ação;
+- Priorizar palavras-chave reais da vaga quando houver correspondência no currículo;
+- Não usar tabelas, colunas, ícones, gráficos ou elementos que prejudiquem leitura por ATS;
+- Preservar datas, empresas, cargos e conquistas originais;
+- Não acrescentar nenhuma informação nova que não esteja no currículo original.
+
+## 7. Design system
+
+Use shadcn/ui com Tailwind CSS.
+
+Paleta:
+- Branco: fundo principal, `#FFFFFF`;
+- Azul primário: `#1D4ED8`;
+- Azul escuro: `#1E3A8A`;
+- Azul claro: `#DBEAFE`;
+- Cinza neutro: `#F8FAFC`;
+- Texto principal: `#0F172A`;
+- Texto secundário: `#475569`;
+- Sucesso: `#16A34A`;
+- Alerta: `#D97706`;
+- Erro: `#DC2626`.
+
+Aplicação:
+- `--background`: branco;
+- `--foreground`: texto principal;
+- `--primary`: azul primário;
+- `--primary-foreground`: branco;
+- `--muted`: cinza neutro;
+- `--muted-foreground`: texto secundário;
+- `--border`: cinza claro;
+- `--ring`: azul primário.
+
+Componentes shadcn/ui:
+- Button para ações principais;
+- Card para blocos de conteúdo;
+- Textarea para vaga e currículo;
+- Badge para palavras-chave;
+- Progress para o score;
+- Alert para avisos e erros;
+- Tabs para alternar entre “Diagnóstico” e “Currículo ajustado”;
+- Sonner para feedback de cópia e exportação.
+
+Tipografia:
+- Fonte: Inter;
+- Títulos: semibold;
+- Corpo: regular;
+- Espaçamento generoso e hierarquia visual clara.
+
+Estilo:
+- Interface limpa, profissional e minimalista;
+- Muito espaço em branco;
+- Bordas arredondadas;
+- Sem gradientes chamativos;
+- Design responsivo para desktop e mobile.
+
+## 8. Estados da interface
+
+Implemente:
+- Estado vazio;
+- Estado de carregamento;
+- Estado de erro;
+- Estado de sucesso;
+- Botões desabilitados quando obrigatório;
+- Feedback após copiar e exportar.
+
+## 9. Ordem de construção
+
+1. Layout base e design system;
+2. Tela inicial;
+3. Formulário de análise;
+4. Tela de resultado;
+5. Lógica de comparação e score;
+6. Geração do currículo;
+7. Exportação em PDF;
+8. Revisão de responsividade e acessibilidade.
+
+Antes de escrever o código, faça perguntas se algo essencial não estiver claro.</summary>
 
 [COLAR AQUI O PROMPT EXATO ENVIADO AO LOVABLE.]
 
@@ -248,32 +433,17 @@ Os dados de teste não representam pessoas ou empresas reais.
 
 ## Evidências de funcionamento
 
-[ADICIONAR CAPTURAS REAIS DA APLICAÇÃO NESTA SEÇÃO.]
+<img width="577" height="429" alt="{7DD6EB4A-1F1F-4071-97AD-F807F15CA7AE}" src="https://github.com/user-attachments/assets/72552ea8-2998-4e75-892c-66bfc5963958" />
+<img width="570" height="453" alt="{660F771B-122A-4121-AD68-A47D9A258A70}" src="https://github.com/user-attachments/assets/d4538319-b5d2-4bc5-ba76-030d3a82036e" />
 
-Sugestões de evidências:
-
-1. Tela inicial.
-2. Formulário preenchido com dados fictícios.
-3. Diagnóstico de compatibilidade.
-4. Currículo ajustado.
-5. PDF exportado.
-
-Incluir somente imagens e arquivos que realmente estejam disponíveis no repositório.
 
 ## Privacidade e tratamento dos dados
 
-[DESCREVER O COMPORTAMENTO REAL DA IMPLEMENTAÇÃO.]
+Envio externo: Nenhum. Não há chamadas de rede (fetch, axios), nem APIs de terceiros, nem funções no servidor. O processamento é 100% executado no browser pelo runtime do JavaScript.
 
-Informar:
+Armazenamento: Ocorre exclusivamente no sessionStorage do navegador.
 
-- Se o processamento ocorre no navegador ou em um servidor.
-- Se algum texto é enviado a um serviço de IA.
-- Se há armazenamento dos dados.
-- Como os dados podem ser removidos, caso sejam armazenados.
-
-Não afirmar que os dados permanecem no navegador sem verificar o código e as requisições da aplicação.
-
-Para demonstrações públicas e testes, utilizar dados fictícios.
+Não há banco de dados, nem armazenamento persistente de longo prazo (localStorage), nem cookies. Ao fechar a aba, os dados são descartados.
 
 ## Limitações
 
@@ -283,19 +453,6 @@ Para demonstrações públicas e testes, utilizar dados fictícios.
 - O currículo ajustado exige revisão humana antes do envio.
 - A aplicação não garante entrevistas, aprovação ou contratação.
 - [ACRESCENTAR LIMITAÇÕES ESPECÍFICAS DA IMPLEMENTAÇÃO.]
-
-## Executar localmente
-
-[ADICIONAR OS PRÉ-REQUISITOS E OS COMANDOS REAIS APÓS CONFERIR OS ARQUIVOS DO PROJETO.]
-
-Documentar:
-
-1. Como clonar o repositório.
-2. Como instalar as dependências.
-3. Como configurar variáveis de ambiente, se necessário.
-4. Como iniciar o ambiente de desenvolvimento.
-
-Nunca incluir chaves, tokens ou senhas neste README ou no código versionado.
 
 ## Possíveis evoluções
 
@@ -308,17 +465,6 @@ Nunca incluir chaves, tokens ou senhas neste README ou no código versionado.
 
 Esses itens são possibilidades futuras e não funcionalidades disponíveis.
 
-## Aprendizados
-
-[PREENCHER COM A SUA EXPERIÊNCIA NO PROJETO.]
-
-Pontos que podem ser abordados:
-
-- Como a especificação influenciou a primeira versão.
-- Quais resultados exigiram revisão.
-- Como foram testadas as regras de não invenção.
-- Quais decisões ajudaram a manter o MVP simples.
-- O que você faria diferente em uma próxima versão.
 
 ## Autor
 

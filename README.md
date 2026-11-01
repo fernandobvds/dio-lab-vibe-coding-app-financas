@@ -33,15 +33,15 @@ O MeuPrimeiroEmprego foi criado para ajudar esse público a:
 
 - [x] Tela inicial com apresentação da proposta.
 - [x] Formulário para inserir a descrição da vaga e o currículo.
-- [ ] Validação dos campos e dos limites mínimos de caracteres.
-- [ ] Análise de compatibilidade.
-- [ ] Exibição de palavras-chave encontradas.
-- [ ] Exibição de palavras-chave ausentes.
-- [ ] Recomendações de melhoria.
-- [ ] Geração do currículo ajustado.
-- [ ] Cópia do currículo gerado.
-- [ ] Exportação em PDF.
-- [ ] Layout validado em dispositivos móveis.
+- [x] Validação dos campos e dos limites mínimos de caracteres.
+- [x] Análise de compatibilidade.
+- [x] Exibição de palavras-chave encontradas.
+- [x] Exibição de palavras-chave ausentes.
+- [x] Recomendações de melhoria.
+- [x] Geração do currículo ajustado.
+- [x] Cópia do currículo gerado.
+- [x] Exportação em PDF.
+- [x] Layout validado em dispositivos móveis.
 
 ## Como funciona
 

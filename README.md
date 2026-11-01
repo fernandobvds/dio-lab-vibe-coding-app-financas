@@ -6,7 +6,7 @@ A proposta é melhorar a apresentação das informações existentes, sem invent
 
 ## Aplicação publicada
 
-- Aplicação: [primeiroempregoti.lovable.app]
+- Aplicação: [https://primeiroempregoti.lovable.app/]
 
 
 ## O problema
@@ -395,9 +395,21 @@ Os dados de teste não representam pessoas ou empresas reais.
 
 ## Evidências de funcionamento
 
-<img width="576" height="424" alt="{B52B40F9-0F47-4A1A-8E2A-D31130C8ADFF}" src="https://github.com/user-attachments/assets/9fa9ccb4-652d-4de9-88ee-f6a0e6ee88d2" />
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/9fa9ccb4-652d-4de9-88ee-f6a0e6ee88d2" 
+    alt="Tela inicial do aplicativo Primeiro Emprego TI"
+    width="800"
+    />
+</p>
 
-<img width="570" height="453" alt="{660F771B-122A-4121-AD68-A47D9A258A70}" src="https://github.com/user-attachments/assets/d4538319-b5d2-4bc5-ba76-030d3a82036e" />
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/d4538319-b5d2-4bc5-ba76-030d3a82036e" 
+    alt="Resultado da análise de compatibilidade entre currículo e vaga"
+    width="800"
+  />
+</p>
 
 
 ## Privacidade e tratamento dos dados

@@ -395,7 +395,8 @@ Os dados de teste não representam pessoas ou empresas reais.
 
 ## Evidências de funcionamento
 
-<img width="577" height="429" alt="{7DD6EB4A-1F1F-4071-97AD-F807F15CA7AE}" src="https://github.com/user-attachments/assets/72552ea8-2998-4e75-892c-66bfc5963958" />
+<img width="576" height="424" alt="{B52B40F9-0F47-4A1A-8E2A-D31130C8ADFF}" src="https://github.com/user-attachments/assets/9fa9ccb4-652d-4de9-88ee-f6a0e6ee88d2" />
+
 <img width="570" height="453" alt="{660F771B-122A-4121-AD68-A47D9A258A70}" src="https://github.com/user-attachments/assets/d4538319-b5d2-4bc5-ba76-030d3a82036e" />
 
 
